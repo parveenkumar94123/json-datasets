@@ -1,0 +1,16 @@
+name: Release Creation Restriction
+
+on:
+  release:
+    types: [ created ]
+
+jobs:
+  check-release-permission:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if the user creating the release is authorized
+        run: |
+          if [[ ! "$(git config --get user.name)" =~ "OwnerName" && ! "$(git config --get user.name)" =~ "CollaboratorName" ]]; then
+            echo "Unauthorized user. Only owners and trusted collaborators can create releases."
+            exit 1
+          fi

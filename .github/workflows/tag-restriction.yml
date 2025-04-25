@@ -1,0 +1,20 @@
+name: Tag Push Restriction
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  check-tag-permission:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Check if the user pushing the tag is authorized
+        run: |
+          if [[ ! "$(git config --get user.name)" =~ "OwnerName" && ! "$(git config --get user.name)" =~ "CollaboratorName" ]]; then
+            echo "Unauthorized user. Only owners and trusted collaborators can push tags."
+            exit 1
+          fi
