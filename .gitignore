@@ -1,0 +1,9 @@
+# IDE & Editor files
+.idea/
+.vscode/
+.DS_Store
+
+# Dependencies
+node_modules/
+package-lock.json
+converted.json

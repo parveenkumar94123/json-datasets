@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build & Output directories
+dist/
+logs/
+
+# Configuration & Lock files
+package-lock.json
+
+# Environment & System files
+.env
+.DS_Store
+.idea/
+.vscode/

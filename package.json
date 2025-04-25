@@ -1,0 +1,35 @@
+{
+  "name": "json-datasets",
+  "description": "A repository of structured JSON datasets including country data, weak password lists, geographical info, and more.",
+  "version": "1.0.0",
+  "author": "Parveen Kumar",
+  "type": "commonjs",
+  "private": true,
+  "license": "ISC",
+  "keywords": [
+    "json",
+    "datasets",
+    "country data",
+    "weak passwords",
+    "geographical information",
+    "country dataset",
+    "geographical data",
+    "security testing",
+    "flexifyui",
+    "parveenkumar.info",
+    "UI library",
+    "utils library",
+    "parveen kumar portfolio",
+    "web development"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "format": "npx prettier --write \"**/*.json\"\n",
+    "txtToJson": "node ./functions/convertTXTToJSON.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}
